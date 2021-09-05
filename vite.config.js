@@ -26,5 +26,11 @@ export default defineConfig({
     alias: {
       "@": '/js'
     }
+  },
+  optimizeDeps: {
+    include: [
+      '@inertiajs/inertia',
+      '@inertiajs/inertia-svelte',
+    ]
   }
 })

@@ -1,7 +1,11 @@
-import App from './App.svelte'
+import { App } from '@inertiajs/inertia-svelte'
 
-const app = new App({
-  target: document.querySelector('body')
+let el = document.getElementById('app')
+
+new App({
+  target: el,
+  props: {
+    initialPage: JSON.parse(el.dataset.page),
+    resolveComponent: (name) => import(`./Pages/${name}.svelte`),
+  },
 })
-
-export default app

@@ -6,6 +6,6 @@
     @vite
   </head>
   <body>
-
+    @inertia
   </body>
 </html>

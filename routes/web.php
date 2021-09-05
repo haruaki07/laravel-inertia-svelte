@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('app');
+    return \Inertia\Inertia::render('index');
 });
+
+
+Route::get('/about', function () {
+    return \Inertia\Inertia::render('about');
+});
+
